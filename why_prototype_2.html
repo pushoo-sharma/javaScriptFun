@@ -1,0 +1,16 @@
+<script>
+let personPrototype = {
+  greet :function (person){
+    return "hello, "+person.firstName;
+  }
+};
+function personFactory(firstName,lastName){
+  let person = Object.create(personPrototype,{
+    firstName : {writable : false,value : firstName},
+    lastName : {writable : false,value : lastName},
+  });
+  return person;
+}
+let john = personFactory("john","smith");
+let james = personFactory("james","soles");
+</script>

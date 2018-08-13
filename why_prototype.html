@@ -1,0 +1,13 @@
+<script>
+function personFactory(firstName,lastName){
+  return{
+    firstName,
+    lastName,
+    greet : function(person){
+      return "hello , "+person.firstName;
+    }
+  };
+}
+let john = personFactory("john","smith");
+let james = personFactory("james","soles");
+</script>
