@@ -1,0 +1,14 @@
+<script>
+function particle(){
+  this.x = 100;
+  this.y = 99;
+}
+particle.prototype.show = function(){
+point(this.x,this.y);
+}
+var p ;
+function setup(){
+  createCanvas(600,300);
+  p = new particle();
+}
+</script>
