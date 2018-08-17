@@ -1,0 +1,2 @@
+my name is pushpak.
+This is a demonstration of XMLHttpRequest Object :)
