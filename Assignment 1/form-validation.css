@@ -1,0 +1,41 @@
+body{
+    background-color: blanchedalmond;
+}
+h1{
+    margin-left: 20px;
+    background-color: aqua;
+    text-align: center;
+}
+form li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+form ul li label{
+    float: left;
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 100px;
+    clear: left;
+    font-size: 15px;
+    font-family: "Times New Roman", Times, serif;
+}
+form ul li input , select , span {
+    float: left;
+    margin-block-start: 10px;
+}
+p{
+    margin-left: 10px;
+    margin-top: 360px;
+    font-weight: bold;
+    float :right;
+}
+[type="submit"]{
+    clear: left;
+    margin: 20px 0 0 230px;
+}
+form textarea{
+    float: left;
+    width: 350px;
+    height: 100px;
+}

@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            Registration
+        </title>
+        <link rel='stylesheet' href='form-validation.css' type='text/css' />
+        <script src="form-validation.js"></script>
+    </head>
+    <body>
+        <h1>Registration Form</h1>
+        <form name ="registration" onsubmit="return formValidted();">
+            <ul>
+                <li><label for ="name">Name</label></li>
+                <li><input type="text" name ="name" size="10"/></li>
+                <li><label for="id">Identification:</label></li>
+                <li><input type="identification" name="id" size="5" /></li>
+                <li><label for="gender">Gender:</label></li>
+                <li><select name="gender">
+                <option selected="" value="Default">(Please select the option)</option>
+                <option value="Male">Male</option>
+                <option value="F">Female</option>
+                </select></li>
+                <li><label for = "language">Native Language:</label></li>
+                <li><input type="radio" value="Hindi" /><span>Hindi</span></li>
+                <li><input type="radio" value="Non-Hindi" /><span>Non-Hindi</span></li>
+                <li><label>Qualification :</label></li>
+                <li><input type="checkbox" name="tech" value="B.Tech" checked /><span>B.Tech</span></li>
+                <li><input type="checkbox" name="tech" value="M.tech" /><span>M.Tech</span></li>
+                <br>
+                <br>
+                <p>Jump to <br><a href="www.google.com">Google</a><br><a href="www.qoura.com">Qoura</a></p></li>
+                <li><input type="submit" name="submit" value="Submit" /></li>
+            </ul>
+            
+        </form>
+    </body>    
+</html>    
