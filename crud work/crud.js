@@ -1,89 +1,82 @@
-var app = new function ()
+var app = function ()
 {
-    this.el = document.getElementById("employee");
-    this.employee = ['pushpak','nitin','jaydeep','smith','yash'];
-    this.count = function(data)
+    var el = document.getElementById("employees");
+    var employee = ['pushpak','nitin','jaydeep','smith','yash'];
+    var count = function(data)
     {
-        var el = document.getElementById('counter');
-        var name = "employ";
-        if(data){
-            if(data > 1){
-                name = "employ";
+        var el = document.getElementById("counter");
+        var name = "employee";
+        if(data)
+        {
+            if(data > 1)
+            {
+                name = "employees";
             }
-            el.innerHTML = data + ' ' + name;
-        }    
-        else{
-           el.innerHTML = 'No '+ name;     
+            el.innerHTML = data +" "+name;
+        }
+        else
+        {
+            el.innerHTML = 'NO '+name;
         }
     };
-
-    this.FetchAll= function()
+    var fetchAll = function()
     {
-        var data='';
+        var data = "";
         if(this.employee.length > 0)
         {
             for(var i = 0;i<this.employee.length;i++)
             {
-                data += '<tr>';
-                data += '<td>' + this.employee[i] + '</td>';
-                data += '<td><button onclick=("app.Edit('+ i +')">Edit</button></td>';
-                data += '<td><button onclick=("app.Delete('+ i +')">Delete</button></td>';
-                data += '</tr>';
+                data += "<tr>";
+                data += "<td>"+this.employee[i]+"</td>";
+                data += "<td><button onclick=('app.edit("+ i +")'>Edit</button></td>";
+                data += "<td><button onclick=('app.deletet("+ i +")'>Delete</button></td>";
+                data += "</tr>";
             }
         }
         this.count(this.employee.length);
         return this.el.innerHTML = data;
 
     };
-    this.AddName = function(){
-        el = document.getElementById('add-name');
-        // Get the value
-        var employ = el.value;
-        if (employ) 
+    addName = function()
+    {
+        var get = document.getElementById("add-text");
+        var get_big = get.value;
+        if(get_big)
         {
-            // Add the new value
-            this.employee.push(employ.trim());
-            // Reset input value
+            this.employee.push(get_big.trim());
+            
             el.value = '';
-            // Dislay the new list
-            this.FetchAll();
+            
+            this.fetchAll();
         }
     };
-    this.Edit = function (item) 
+    var edit = function(i)
     {
         var el = document.getElementById('edit-name');
-        // Display value in the field
-        el.value = this.employee[item];
-        // Display fields
-        document.getElementById('spoiler').style.display = 'block';
-        self = this;
-        document.getElementById('saveEdit').onsubmit = function() 
+        el.value = this.employee[i];
+        //
+        //
+        document.getElementById("saveEdit").onsubmit = function()
         {
-            // Get value
-            var employ = el.value;
-            if (employ) 
+            var take_employee = el.value;
+            if(take_employee)
             {
-                // Edit value
-                self.employ.splice(item, 1, country.trim());
-                // Display the new list
-                self.FetchAll();
-                // Hide fields
-                closeInput();
+                self.take_employee.splice(i,1,employee.trim());
+                self.fetchAll();
+                this.closeInput();
             }
         }
     };
-
-    this.Delete = function (item) 
+    var deletet  = function(i)
     {
-        // Delete the current row
-        this.employee.splice(item, 1);
-        // Display the new list
-        this.FetchAll();
+        this.employee.splice(i,1);
+        this.fetchAll();
     };
-    
-    app.FetchAll();
-    function closeInput() 
+    fetchAll();
+
+    function closeInput()
     {
         document.getElementById('spoiler').style.display = 'none';
     }
+
 }
