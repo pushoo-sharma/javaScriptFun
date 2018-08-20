@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>
+            Crud Operation
+        </title>
+        <script src="crud.js">
+        </script>
+        <style>
+            input[type='submit'], button, [aria-label]{
+                cursor: pointer;
+            }
+            #spoiler{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="javascript:void(0);" method="POST" onsubmit="app.AddName()">
+            <input type = "text" placeholder="Add Employee Name" id="add-name">
+            <input type = "submit" value = "Add">
+        </form>    
+        <div id = "spoiler"  role="aria-hidden">
+            <form action="javascript:void(0);" method="POST" id="saveEdit">
+                <input type="text" id="edit-name">
+                <input type="submit" value="Edit"/>
+                <a onclick="closeInput()" aria-label="close">&#10006</a>
+            </form>
+        </div>
+        <p counter = "counter"></p>
+        <table>
+        <tr>
+            <th>
+                Name
+            </th>
+        </tr>
+        <tbody id="employee">
+        </tbody>
+        </table>
+    </body>
+</html>
