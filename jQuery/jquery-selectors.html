@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>
+        JQuery try
+    </title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+    </script>
+    <style>
+        body{
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            background:  grey;
+            line-height:  1.5 em;
+        }
+        header{
+            background: black;
+            color : wheat;
+            padding : 20px;
+            text-align: center;
+            border-bottom: 10px solid black;
+            margin-bottom: 10px;
+        }
+        #container{
+            width : 90%;
+            padding : 10px;
+            margin : auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+        Learning JQuery
+        </h1>
+    </header>
+    <div id = "container">
+    <h1 id = "heading1">Heading one</h1>
+    <p id = "para1">This para <span>one</span></p>
+    <h1 class = "heading2">Heading one</h1>
+    <p class = "para2">This para <span>two<span></p>
+    <span>hi i am span</span>
+    <ul id = "list">
+        <li>Items</li>
+        <li>Items</li>
+        <li>Items</li>
+        <li>Items</li>
+        <li>Items</li>
+        <li>Items</li>
+    </ul>
+    <input type="button" value = "button1">
+    <input type="submit" value = "Submit">
+    <input type="text">
+    <a href="http://google.com">Google</a>
+    <a href="www.stackoverflow.com">stackoverflow</a>
+    </div>
+    <script>
+        // hiding para 
+            //$('p').hide();
+        // hiding h1
+            //$('h1').hide();
+        // hiding heading one with id
+            //$('h1#heading1').hide();
+        // hiding heading with class
+            //$('h1.heading2').hide();
+            //$('.heading2').hide(); 
+        // accessing inner element
+            //$('p span').css('color','red');
+        // all span
+            //$('span').css('color','red');
+        // regarding li
+            //$('ul#list li:first').css('color','red');     
+            //$('ul#list').css('color','green');  
+            //$('ul#list li:last').css('color','green');
+            //$('ul#list li:even').css('color','red');
+            //$('ul#list li:nth-child(3n)').css('color','red');    
+        // input hide
+            //$(':button').hide(); 
+            //$(':submit').hide();  
+            //$(':text').hide();
+        // attributes
+            //$('[href]').css('color' ,blue); 
+        $('a[href = "http://google.com"]').css('color','green');  
+        // everything
+            //$('*').hide();
+    </script>   
+</body> 
+</html>

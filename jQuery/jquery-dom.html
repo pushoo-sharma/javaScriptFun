@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title>
+        JQuery try
+    </title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+    </script>
+    <style>
+        body{
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            background:  grey;
+            line-height:  1.5 em;
+        }
+        header{
+            background: black;
+            color : wheat;
+            padding : 20px;
+            text-align: center;
+            border-bottom: 10px solid black;
+            margin-bottom: 10px;
+        }
+        #container{
+            width : 90%;
+            padding : 10px;
+            margin : auto;
+        }
+        .myClass{
+            color:pink;
+            background:white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+        Jquery Dom
+        </h1>
+    </header>
+    <div id = "container">
+    <button id = "btn1">Button 1</button>
+    <button id = "btn2">Button 2</button>
+    <p class="para1">This is para1 class :)</p>
+    <p class="para2">This is para2 class</p>
+    <div id = "myDiv"></div>
+    </div>
+    <ul>
+        <li>List Item1</li>
+        <li>List Item2</li>
+        <li>List Item3</li>
+    </ul>
+    <a href="www.google.com">Google</a>
+    <script>
+    $('document').ready(function(){
+       $('.para1').css({
+           color : "blue",
+           background : "white",
+
+       });
+        // $('.para2').addClass('myClass');
+        //$('.para2').removeClass('myClass');
+       $('#btn1').click(function(){
+           $('.para2').toggleClass('myClass');
+       })
+       // $('#myDiv').text("hello!");
+       //.html will work the same
+       $('#myDiv').html('<h3>Hello</h3>');
+       //alert($('#myDiv').text());
+       $('ul').append('<li>Apppend list Item</li>');
+       $('ul').prepend('<li>Prepand list Items</li>');
+       $('.para1').appendTo('.para2');
+       $('.para1').prependTo('.para2');
+       $('ul').before('<h4>pushpak</h4>');
+       $('ul').after('<h4>sharma</h4>');
+       // Imp Concept
+       $('ul').empty();
+       $('ul').detach();
+       $('a').attr('target','_blank');
+    });  
+    </script>   
+</body> 
+</html>

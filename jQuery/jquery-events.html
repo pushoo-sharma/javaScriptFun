@@ -1,0 +1,138 @@
+<html>
+<head>
+    <title>
+        JQuery try
+    </title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+    </script>
+    <style>
+        body{
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            background:  grey;
+            line-height:  1.5 em;
+        }
+        header{
+            background: black;
+            color : wheat;
+            padding : 20px;
+            text-align: center;
+            border-bottom: 10px solid black;
+            margin-bottom: 10px;
+        }
+        #container{
+            width : 90%;
+            padding : 10px;
+            margin : auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+        Mouse Event
+        </h1>
+    </header>
+    <div id = "container">
+    <button id = "btn1">Button 1</button>
+    <button id = "btn2">Button 2</button>
+    <p class="para1">This is para1 class :)</p>
+    <hr>
+    <form>
+        <label>
+            Name
+        </label><br>
+        <input type = "text" id = "name" name = "name">
+        <br>
+        <label>
+            Email
+        </label><br>
+        <input type = "text" id = "email" name = "email">
+        <br>
+        <select id = "gender" name = "gender"><br>
+            <option value = "Male">Male</option>
+            <option value = "Female">Female</option>
+        </select>
+        <br>
+        <br>
+        <input type = "submit" id = "submit">
+    </form>
+    </div>
+    <script>
+    $('document').ready(function(){
+        /*
+        $('#btn1').click(function(){
+            alert("button clicked !");
+        });
+        
+       // fast than
+         $('#btn1').on('click',function(){
+           alert("Button Clicked using on() 1");
+        });
+        
+       // hides para1 class element - btn1
+       $('#btn1').on('click',function(){
+           $('.para1').hide();
+       });
+       // shows para1 class element - btn2
+       $('#btn2').on('click',function(){
+           $('.para1').show();
+       });
+       // .toogle()
+       $('#btn1').on('click',function(){
+           $('.para1').toggle();
+       });
+       // bdl (double click)
+       $('#btn1').dblclick(function(){
+           $('.para1').toggle();
+       });
+      // hover function
+      $('#btn1').hover(function(){
+          $('.para1').toggle();
+      });
+      // hover here will not work
+      $('#btn1').on('hover',function(){
+          $('.para1').toogle();
+      });
+     // does the work of hover combined(mouseenter,mouseleave)
+     $('#btn1').on('mouseenter',function(){
+         $('.para1').toggle();
+     });
+     $('#btn1').on('mouseleave',function(){
+         $('.para1').toggle();
+     });
+        // mousemove,mouseup,mousedown are some more
+        // passing parameters
+        $('#btn1').on('click',function(e){
+        alert(e);
+        });
+   // clientX
+   $('#btn1').on('mousemove',function(e){
+       console.log("Cordinate y :"+e.clientY +" corindate y :"+e.clientY);
+   });
+   // bug
+  $('input').focus(function(){
+      $('input#name').css('background','pink');
+  });
+  */
+ $('input').focus(function(){
+     $(this).css('background','pink');
+ });
+ $('input').blur(function(){
+     $(this).css('background','white');
+ });
+ $('input').keyup(function(e){
+     conbsole.log(e);
+ });
+ $('select#gender').change(function(e){
+     alert(e.target.value);
+ });
+ $('#form').submit(function(e){
+     e.preventDefault();
+     var name = $('input#name').val();
+     console.log(name);
+ });
+    });  
+    </script>   
+</body> 
+</html>
