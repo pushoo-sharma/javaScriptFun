@@ -1,4 +1,4 @@
-# javaScript
+# JavaScript
 
 zero to hero module
 
