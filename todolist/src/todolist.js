@@ -9,6 +9,7 @@ class TodoList extends Component{
         this.addElement = this.addElement.bind();
     }
     addElement(e){
+        
         if(this._inputElement.value !== ""){
             var newItem = {
                 text : this._inputElement.value,
@@ -30,7 +31,7 @@ class TodoList extends Component{
                 <div className = "header">
                     <form onSubmit ={this.addElement}>
                         <input
-                        ref = {(a) => {this._inputElement = a}} 
+                        ref = {(a) => this._inputElement = a} 
                         placeholder = "Entre here !!">
                         </input>
                         <button type = "submit">
