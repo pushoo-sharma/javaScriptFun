@@ -3,7 +3,7 @@ import { Table } from 'reactstrap';
 import { Container, Row, Col } from 'reactstrap';
 export default class Example extends React.Component {
     handleOnclickEvent = (event) =>{
-        console.log("Delete Row")
+        console.log("Cancel On"+event.target.id)
     };
   render() {
     return (
@@ -23,21 +23,21 @@ export default class Example extends React.Component {
             <td>Patient1</td>
             <td>12/01/19</td>
             <td>1:00 P.M</td>
-            <td className="text-danger" id = "Date.now()" onClick = {this.handleOnclickEvent}>Cancel</td>
+            <td className="text-danger" id = "1" onClick = {this.handleOnclickEvent}>Cancel</td>
           </tr>
           <tr>
             <th scope="row">2</th>
             <td>Patient2</td>
             <td>13/02/19</td>
             <td>1:00 P.M</td>
-            <td className="text-danger" onClick = {this.handleOnclickEvent}>Cancel</td>
+            <td className="text-danger" id = {Date.now()} onClick = {this.handleOnclickEvent}>Cancel</td>
           </tr>
           <tr>
             <th scope="row">3</th>
             <td>Patient3</td>
             <td>14/02/19</td>
             <td>1:00 P.M</td>
-            <td className="text-danger" onClick = {this.handleOnclickEvent}>Cancel</td>
+            <td className="text-danger" id = {Date.now()} onClick = {this.handleOnclickEvent}>Cancel</td>
           </tr>
         </tbody>
       </Table>
